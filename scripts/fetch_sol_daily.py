@@ -162,10 +162,24 @@ def fees_overview(dtype, probe):
     cats = {}
     for p in protos:
         cats[p.get('category') or ''] = cats.get(p.get('category') or '', 0) + 1
+    # per-category totals of the last three finished days, to match DefiLlama's own "App Fees"/"App Revenue" definitions
+    cat_days = {}
+    for row in (j.get('totalDataChartBreakdown') or [])[-4:]:
+        if not isinstance(row, (list, tuple)) or len(row) < 2 or not isinstance(row[1], dict):
+            continue
+        d = day_of(row[0])
+        if d >= TODAY:
+            continue
+        acc = {}
+        for name, v in row[1].items():
+            if isinstance(v, (int, float)):
+                c = cat.get(str(name), '?')
+                acc[c] = acc.get(c, 0) + v
+        cat_days[d] = {k: round(v) for k, v in sorted(acc.items(), key=lambda x: -x[1])}
     probe[f'fees_{dtype}'] = dict(url=url, status=st, bytes=n, keys=sorted(j)[:60], protocols=len(protos), categories=cats,
                                   breakdown_rows=len(j.get('totalDataChartBreakdown') or []), last_day=lastd,
                                   recent={d: buckets[d] for d in days[-12:]}, total_recent={d: total.get(d) for d in days[-12:]},
-                                  top_protocols_day_before_last=top,
+                                  top_protocols_day_before_last=top, category_totals=cat_days,
                                   unknown_top=sorted(unknown_names.items(), key=lambda x: -x[1])[:15],
                                   total24h=j.get('total24h'), total7d=j.get('total7d'),
                                   sample_protocol={k: protos[0].get(k) for k in list(protos[0])[:25]} if protos else None)
