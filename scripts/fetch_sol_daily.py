@@ -41,8 +41,9 @@ PROBE = os.path.join(ROOT, 'data', 'probe.json')
 UA = 'claude-macro-radar-data/1.0 (GitHub Actions; daily Solana metrics for a personal dashboard; github.com/MikeNguyen25/claude-macro-radar-data)'
 NOW = dt.datetime.now(dt.timezone.utc)
 TODAY = NOW.date().isoformat()
-# categories that are not "apps": the chain's own fees and MEV tips (both go into REV)
-NON_APP = {'Chain', 'MEV'}
+# categories that are not "apps": the chain's own fees and MEV tips (both go into REV) and liquid-staking rewards.
+# With these three left out, App Fees / App Revenue match the numbers on https://defillama.com/chain/solana within ~0.3%.
+NON_APP = {'Chain', 'MEV', 'Liquid Staking'}
 # NYSE full-day closures: a US ETF records no flow, so these weekdays count as 0
 NYSE_HOLIDAYS = {
     '2025-01-01', '2025-01-09', '2025-01-20', '2025-02-17', '2025-04-18', '2025-05-26', '2025-06-19', '2025-07-04',
@@ -56,13 +57,13 @@ MONTHS = {m: i + 1 for i, m in enumerate(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Ju
 
 SERIES_META = {
     'SOL.w_dex': dict(unit='USD tỷ', kind='flow', source='DefiLlama', url='https://defillama.com/dexs/chain/solana',
-                      note='Khối lượng giao dịch spot trên các DEX của Solana trong từng ngày UTC (DefiLlama, tổng các sàn DEX).'),
+                      note='Khối lượng giao dịch spot trên các DEX của Solana trong từng ngày UTC (API tổng hợp DEX của DefiLlama; biểu đồ trên trang chain của DefiLlama có thể thấp hơn khoảng 8–10% vì bỏ phần khối lượng bị tính trùng).'),
     'SOL.w_rev': dict(unit='USD triệu', kind='flow', source='DefiLlama', url='https://defillama.com/chain/solana',
                       note='REV theo ngày UTC: phí giao dịch của chain (phí cơ bản + phí ưu tiên) cộng tip MEV, theo DefiLlama (nhóm Chain + MEV).'),
     'SOL.w_app_rev': dict(unit='USD triệu', kind='flow', source='DefiLlama', url='https://defillama.com/chain/solana',
-                          note='Doanh thu của các ứng dụng trên Solana trong từng ngày UTC (DefiLlama dailyRevenue, không gồm phí chain và tip MEV).'),
+                          note='Doanh thu của các ứng dụng trên Solana trong từng ngày UTC (DefiLlama dailyRevenue; không gồm phí chain, tip MEV và phần thưởng liquid staking, cùng cách tính với số App Revenue trên trang Solana của DefiLlama).'),
     'SOL.w_app_fees': dict(unit='USD triệu', kind='flow', source='DefiLlama', url='https://defillama.com/chain/solana',
-                           note='Phí người dùng trả cho các ứng dụng trên Solana trong từng ngày UTC (DefiLlama dailyFees, không gồm phí chain và tip MEV).'),
+                           note='Phí người dùng trả cho các ứng dụng trên Solana trong từng ngày UTC (DefiLlama dailyFees; không gồm phí chain, tip MEV và phần thưởng liquid staking, cùng cách tính với số App Fees trên trang Solana của DefiLlama).'),
     'SOL.w_etf': dict(unit='USD triệu', kind='flow', calendar='weekdays', source='Farside Investors', url='https://farside.co.uk/sol/',
                       note='Dòng tiền ròng hằng ngày của các ETF SOL giao ngay tại Mỹ (cột Total của Farside), chỉ ngày giao dịch; ngày sàn Mỹ nghỉ lễ ghi 0.'),
     'SOL.d_tvl': dict(unit='USD tỷ', kind='level', source='DefiLlama', url='https://defillama.com/chain/solana',
@@ -150,7 +151,7 @@ def fees_overview(dtype, probe):
                 b['chain'] += v
             elif c == 'MEV':
                 b['mev'] += v
-            else:
+            elif c not in NON_APP:
                 b['app'] += v
     days = sorted(buckets)
     lastd = days[-1] if days else None
