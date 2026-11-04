@@ -249,6 +249,12 @@ def page_probe(probe):
             pp = (nd.get('props') or {}).get('pageProps') or {}
             info['buildId'] = nd.get('buildId')
             info['pageProps'] = {k: (type(v).__name__, len(v) if hasattr(v, '__len__') else v) for k, v in list(pp.items())[:80]}
+            # the page's own headline numbers, to check our definitions against them
+            info['values'] = {k: json.dumps(pp.get(k), ensure_ascii=False, default=str)[:1500] for k in
+                              ('chainFees', 'chainRevenue', 'appRevenue', 'appFees', 'dexs', 'users', 'inflows', 'tvlChartSummary', 'chainTokenInfo', 'chainIncentives')}
+            sc = pp.get('stablecoins')
+            info['values']['stablecoins_keys'] = sorted(sc.keys()) if isinstance(sc, dict) else None
+            info['values']['charts'] = json.dumps(pp.get('charts'), ensure_ascii=False, default=str)[:1500]
         except Exception as e:
             info['next_data_error'] = str(e)
     for label in ('Chain REV', 'App Revenue', 'App Fees', 'Chain Fees', 'Active Addresses', 'Transactions', 'DEXs Volume'):
