@@ -1,10 +1,10 @@
 {
- "ranAt": "2026-11-10T14:59:59+00:00",
+ "ranAt": "2026-11-10T21:20:44+00:00",
  "today_utc": "2026-11-10",
  "dex": {
   "url": "https://api.llama.fi/overview/dexs/solana?excludeTotalDataChart=false&excludeTotalDataChartBreakdown=true&dataType=dailyVolume",
   "status": 200,
-  "bytes": 248556,
+  "bytes": 248583,
   "keys": [
    "allChains",
    "breakdown24h",
@@ -52,7 +52,7 @@
    ],
    [
     1794268800,
-    1372774115.55
+    1450133233.6200001
    ]
   ],
   "total24h": 1487777537.3200002,
@@ -73,7 +73,7 @@
  "fees_dailyFees": {
   "url": "https://api.llama.fi/overview/fees/solana?excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false&dataType=dailyFees",
   "status": 200,
-  "bytes": 3279563,
+  "bytes": 3281285,
   "keys": [
    "allChains",
    "breakdown24h",
@@ -99,7 +99,7 @@
    "totalDataChartBreakdown",
    "totalLastFullDay"
   ],
-  "protocols": 379,
+  "protocols": 380,
   "categories": {
    "Dexs": 41,
    "Lending": 12,
@@ -145,7 +145,7 @@
    "Interface": 7,
    "Gamified Mining": 13,
    "Developer Tools": 6,
-   "Luck Games": 1,
+   "Luck Games": 2,
    "Bridge Aggregators": 1,
    "Liquidity Automation": 3,
    "Transaction Execution": 1,
@@ -218,13 +218,13 @@
    "2026-11-09": {
     "chain": 0.0,
     "mev": 117995.0,
-    "app": 8169564.620000001,
+    "app": 8169571.620000001,
     "unknown": 0.0
    },
    "2026-11-10": {
     "chain": 0.0,
-    "mev": 118327.0,
-    "app": 8050202.51,
+    "mev": 134574.0,
+    "app": 8063891.83,
     "unknown": 0.0
    }
   },
@@ -239,8 +239,8 @@
    "2026-11-06": 8808824.120000003,
    "2026-11-07": 8008600.4799999995,
    "2026-11-08": 8311975.3599999985,
-   "2026-11-09": 9176809.280000003,
-   "2026-11-10": 9011013.17
+   "2026-11-09": 9176816.280000003,
+   "2026-11-10": 9046534.49
   },
   "top_protocols_day_before_last": [
    [
@@ -497,17 +497,17 @@
     "Yield": 643,
     "Prediction Market": 476,
     "Onchain Capital Allocator": 420,
+    "Luck Games": 27,
     "NFT Lending": 21,
-    "Luck Games": 20,
     "AI Agents": 2,
     "Options": 1
    }
   },
   "unknown_top": [],
-  "total24h": 9382935.720000003,
-  "total7d": 67005524.89000006,
+  "total24h": 9382942.720000003,
+  "total7d": 67005531.89000006,
   "sample_protocol": {
-   "total24h": 245472,
+   "total24h": 295487,
    "total48hto24h": 248799,
    "totalLastFullDay": 331751,
    "total7d": 2224854,
@@ -521,9 +521,9 @@
    "totalAllTime": 1460832545,
    "average1y": 366501.6493150685,
    "monthlyAverage1y": 11156310.205150686,
-   "change_1d": -1.34,
-   "change_7d": -5.26,
-   "change_1m": 10.19,
+   "change_1d": 18.77,
+   "change_7d": 14.05,
+   "change_1m": 32.64,
    "change_7dover7d": 7.61,
    "change_30dover30d": -66.55,
    "defillamaId": "214",
@@ -537,7 +537,7 @@
  "fees_dailyRevenue": {
   "url": "https://api.llama.fi/overview/fees/solana?excludeTotalDataChart=false&excludeTotalDataChartBreakdown=false&dataType=dailyRevenue",
   "status": 200,
-  "bytes": 2921424,
+  "bytes": 2923187,
   "keys": [
    "allChains",
    "breakdown24h",
@@ -563,7 +563,7 @@
    "totalDataChartBreakdown",
    "totalLastFullDay"
   ],
-  "protocols": 365,
+  "protocols": 366,
   "categories": {
    "Dexs": 36,
    "Lending": 12,
@@ -609,7 +609,7 @@
    "Prediction Market": 4,
    "Gamified Mining": 13,
    "Developer Tools": 6,
-   "Luck Games": 1,
+   "Luck Games": 2,
    "Bridge Aggregators": 1,
    "Liquidity Automation": 3,
    "Options": 1,
@@ -681,13 +681,13 @@
    "2026-11-09": {
     "chain": 0.0,
     "mev": 2768.0,
-    "app": 2791803.7999999993,
+    "app": 2791804.4899999993,
     "unknown": 0.0
    },
    "2026-11-10": {
     "chain": 0.0,
     "mev": 2768.0,
-    "app": 2769005.9999999995,
+    "app": 2766408.4499999997,
     "unknown": 0.0
    }
   },
@@ -702,8 +702,8 @@
    "2026-11-06": 3208956.6599999997,
    "2026-11-07": 2559970.440000001,
    "2026-11-08": 2744510.61,
-   "2026-11-09": 2877664.4899999993,
-   "2026-11-10": 2802856.69
+   "2026-11-09": 2877665.1799999992,
+   "2026-11-10": 2810636.14
   },
   "top_protocols_day_before_last": [
    [
@@ -953,17 +953,17 @@
     "Bridge Aggregator": 52,
     "Liquid Restaking": 42,
     "NFT Lending": 21,
-    "Luck Games": 20,
+    "Luck Games": 21,
     "AI Agents": 1,
     "Options": 0,
     "Restaking": 0
    }
   },
   "unknown_top": [],
-  "total24h": 3082553.649999999,
-  "total7d": 23276035.63999999,
+  "total24h": 3082554.339999999,
+  "total7d": 23276036.32999999,
   "sample_protocol": {
-   "total24h": 38273,
+   "total24h": 46173,
    "total48hto24h": 38745,
    "totalLastFullDay": 52005,
    "total7d": 347985,
@@ -977,9 +977,9 @@
    "totalAllTime": 132007734,
    "average1y": 54826.501369863014,
    "monthlyAverage1y": 1668918.7016986301,
-   "change_1d": -1.22,
-   "change_7d": -5.25,
-   "change_1m": 12.2,
+   "change_1d": 19.17,
+   "change_7d": 14.31,
+   "change_1m": 35.36,
    "change_7dover7d": 7.96,
    "change_30dover30d": -66.48,
    "defillamaId": "214",
@@ -1105,7 +1105,7 @@
   },
   "2026-11-10": {
    "chain_fees": null,
-   "mev_tips": 118327.0
+   "mev_tips": 134574.0
   }
  },
  "tvl": {
@@ -1134,14 +1134,14 @@
    },
    {
     "date": 1794268800,
-    "tvl": 4985667466
+    "tvl": 4978482301
    }
   ]
  },
  "stables": {
   "url": "https://stablecoins.llama.fi/stablecoincharts/Solana",
   "status": 200,
-  "bytes": 757017,
+  "bytes": 757020,
   "points": 1645,
   "first_keys": [
    "date",
@@ -1229,34 +1229,34 @@
      "peggedMXN": 0
     },
     "totalCirculatingUSD": {
-     "peggedUSD": 14752771471.57,
-     "peggedEUR": 77789949.48,
-     "peggedJPY": 52.56,
-     "peggedCHF": 1313656.12,
-     "peggedAUD": 168725.5,
-     "peggedGBP": 421296.05,
+     "peggedUSD": 14753972461.76,
+     "peggedEUR": 77559699.95,
+     "peggedJPY": 52.53,
+     "peggedCHF": 1314019.13,
+     "peggedAUD": 167431.92,
+     "peggedGBP": 419526.78,
      "peggedTRY": 160639.7,
-     "peggedCAD": 1430.87,
+     "peggedCAD": 1428.23,
      "peggedKRW": 0.7,
      "peggedCOP": 4626.59,
-     "peggedMXN": 476737.05
+     "peggedMXN": 475583.28
     },
     "totalMintedUSD": {
-     "peggedUSD": 14434415499.47,
-     "peggedEUR": 77759480.85,
-     "peggedJPY": 52.56,
-     "peggedCHF": 1313656.12,
-     "peggedAUD": 168725.5,
-     "peggedGBP": 421296.05,
+     "peggedUSD": 14435512031.08,
+     "peggedEUR": 77529374.71,
+     "peggedJPY": 52.53,
+     "peggedCHF": 1314019.13,
+     "peggedAUD": 167431.92,
+     "peggedGBP": 419526.78,
      "peggedTRY": 160639.7,
-     "peggedCAD": 1430.87,
+     "peggedCAD": 1428.23,
      "peggedKRW": 0,
      "peggedCOP": 4626.59,
-     "peggedMXN": 476737.05
+     "peggedMXN": 475583.28
     },
     "totalBridgedToUSD": {
-     "peggedUSD": 319994246.1,
-     "peggedEUR": 30468.63,
+     "peggedUSD": 320098795.21,
+     "peggedEUR": 30325.24,
      "peggedJPY": 0,
      "peggedCHF": 0,
      "peggedAUD": 0,
@@ -1273,7 +1273,7 @@
  "etf": {
   "url": "https://farside.co.uk/sol/",
   "status": 200,
-  "bytes": 125568,
+  "bytes": 125570,
   "rows": 25,
   "header": [
    "",
@@ -1316,17 +1316,17 @@
   "url": "https://coins.llama.fi/prices/current/coingecko:solana",
   "status": 200,
   "coin": {
-   "price": 84.24,
+   "price": 83.39941334999999,
    "symbol": "SOL",
-   "timestamp": 1794322803,
+   "timestamp": 1794345650,
    "confidence": 0.999
   }
  },
  "page": {
   "url": "https://defillama.com/chain/solana",
   "status": 200,
-  "bytes": 574519,
-  "buildId": "d24d240033d65d832d4762fdf04b07446a013e37",
+  "bytes": 574571,
+  "buildId": "5c60b4cd9b5318ae24fb5a403c7f069caaa1a82b",
   "pageProps": {
    "chain": [
     "str",
@@ -1422,7 +1422,7 @@
    ],
    "allChains": [
     "list",
-    606
+    607
    ],
    "unlocks": [
     "dict",
@@ -1490,19 +1490,19 @@
    ],
    "pageClockSec": [
     "int",
-    1794320794
+    1794342539
    ]
   },
   "values": {
-   "chainFees": "{\"total24h\": {\"status\": \"loaded\", \"data\": 407969}, \"feesPaid\": {\"status\": \"loaded\", \"data\": {\"total24h\": 9779008.409999998, \"chart\": [[\"Pump\", 3636806, \"https://icons.llamao.fi/icons/protocols/pump?w=48&h=48\"], [\"Raydium\", 553866, \"https://icons.llamao.fi/icons/protocols/raydium?w=48&h=48\"], [\"Meteora\", 541996, \"https://icons.llamao.fi/icons/protocols/meteora?w=48&h=48\"], [\"Axiom\", 505786, \"https://icons.llamao.fi/icons/protocols/axiom?w=48&h=48\"], [\"Jupiter\", 504573, \"https://icons.llamao.fi/icons/protocols/jupiter?w=48&h=48\"], [\"Collector Crypt\", 272804, \"https://icons.llamao.fi/icons/protocols/collector-crypt?w=48&h=48\"], [\"Sanctum\", 258833, \"https://icons.llamao.fi/icons/protocols/sanctum?w=48&h=48\"], [\"Jito\", 238583, \"https://icons.llamao.fi/icons/protocols/jito?w=48&h=48\"], [\"Lunar Lander\", 217771, \"https://icons.llamao.fi/icons/protocols/lunar-lander?w=48&h=48\"], [\"BONK.fun\", 215820, \"https://icons.llamao.fi/icons/protocols/bonk.fun?w=48&h=48\"], [\"Orca\", 198109, \"https://icons.llamao.fi/icons/protocols/orca?w=48&h=48\"], [\"fomo Wallet\", 193647, \"https://icons.llamao.fi/icons/protocols/fomo-wallet?w=48&h=48\"], [\"Securitize\", 141171, \"https://icons.llamao.fi/icons/protocols/securitize?w=48&h=48\"], [\"Binance Staked SOL\", 138238, \"https://icons.llamao.fi/icons/protocols/binance-staked-sol?w=48&h=48\"]]}}, \"totalREV24h\": {\"status\": \"loaded\", \"data\": 516266}}",
+   "chainFees": "{\"total24h\": {\"status\": \"loaded\", \"data\": 407969}, \"feesPaid\": {\"status\": \"loaded\", \"data\": {\"total24h\": 9885229.340000004, \"chart\": [[\"Pump\", 3636806, \"https://icons.llamao.fi/icons/protocols/pump?w=48&h=48\"], [\"Raydium\", 611173, \"https://icons.llamao.fi/icons/protocols/raydium?w=48&h=48\"], [\"Meteora\", 542310, \"https://icons.llamao.fi/icons/protocols/meteora?w=48&h=48\"], [\"Axiom\", 505786, \"https://icons.llamao.fi/icons/protocols/axiom?w=48&h=48\"], [\"Jupiter\", 504573, \"https://icons.llamao.fi/icons/protocols/jupiter?w=48&h=48\"], [\"Collector Crypt\", 355016, \"https://icons.llamao.fi/icons/protocols/collector-crypt?w=48&h=48\"], [\"Sanctum\", 258833, \"https://icons.llamao.fi/icons/protocols/sanctum?w=48&h=48\"], [\"Jito\", 255146, \"https://icons.llamao.fi/icons/protocols/jito?w=48&h=48\"], [\"Orca\", 225877, \"https://icons.llamao.fi/icons/protocols/orca?w=48&h=48\"], [\"Lunar Lander\", 213180, \"https://icons.llamao.fi/icons/protocols/lunar-lander?w=48&h=48\"], [\"fomo Wallet\", 193647, \"https://icons.llamao.fi/icons/protocols/fomo-wallet?w=48&h=48\"], [\"BONK.fun\", 169099, \"https://icons.llamao.fi/icons/protocols/bonk.fun?w=48&h=48\"], [\"Securitize\", 141171, \"https://icons.llamao.fi/icons/protocols/securitize?w=48&h=48\"], [\"Binance Staked SOL\", 138238, \"https://icons.llamao.fi/icons/protocols/binance-staked-sol?w=48&h=48\"]]}}, \"totalREV24h\": {\"status\": \"loaded\", \"data\": 532829}}",
    "chainRevenue": "null",
    "appRevenue": "null",
    "appFees": "null",
-   "dexs": "{\"total24h\": 1251603917.71, \"total7d\": 10478143804.090002, \"change_7dover7d\": 0.56, \"dexsDominance\": {\"status\": \"loaded\", \"data\": 5.98}, \"chart\": [[1793145600000, 1579011714], [1793232000000, 2142120775], [1793318400000, 1978452123], [1793404800000, 830275402], [1793491200000, 774556607], [1793577600000, 1701057786], [1793664000000, 1731733569.56], [1793750400000, 2229730114.02], [1793836800000, 2071045286.3500001], [1793923200000, 1349151414.28], [1794009600000, 797251350.31], [1794096000000, 934212167.09], [1794182400000, 1365019902.48], [1794268800000, 1251603917.71]]}",
+   "dexs": "{\"total24h\": 1329095574.78, \"total7d\": 10478143804.090002, \"change_7dover7d\": 0.56, \"dexsDominance\": {\"status\": \"loaded\", \"data\": 4.65}, \"chart\": [[1793145600000, 1579011714], [1793232000000, 2142120775], [1793318400000, 1978452123], [1793404800000, 830275402], [1793491200000, 774556607], [1793577600000, 1701057786], [1793664000000, 1731733569.56], [1793750400000, 2229730114.02], [1793836800000, 2071045286.3500001], [1793923200000, 1349151414.28], [1794009600000, 797251350.31], [1794096000000, 934212167.09], [1794182400000, 1365019902.48], [1794268800000, 1329095574.78]]}",
    "users": "{\"activeUsers\": {\"status\": \"loaded\", \"data\": 2707102}, \"newUsers\": {\"status\": \"loaded\", \"data\": null}, \"transactions\": {\"status\": \"loaded\", \"data\": 93481514}}",
-   "inflows": "{\"netInflows\": -974243}",
-   "tvlChartSummary": "{\"totalValueUSD\": 4988532815, \"tvlPrevDay\": 5094629649, \"valueChange24hUSD\": -106096834, \"change24h\": -2.0825229959713605, \"computedAtMs\": 1794320794315}",
-   "chainTokenInfo": "{\"gecko_id\": \"solana\", \"token_symbol\": \"SOL\", \"tokenPageRoute\": \"/token/SOL\", \"market\": {\"status\": \"loaded\", \"data\": {\"current_price\": 83.65, \"market_cap\": 49449385553, \"fully_diluted_valuation\": 53310808851}}}",
+   "inflows": "{\"netInflows\": -1445454}",
+   "tvlChartSummary": "{\"totalValueUSD\": 4998608206, \"tvlPrevDay\": 5094629649, \"valueChange24hUSD\": -96021443, \"change24h\": -1.8847580612429322, \"computedAtMs\": 1794342539756}",
+   "chainTokenInfo": "{\"gecko_id\": \"solana\", \"token_symbol\": \"SOL\", \"tokenPageRoute\": \"/token/SOL\", \"market\": {\"status\": \"loaded\", \"data\": {\"current_price\": 83.36613275, \"market_cap\": 49281799407.80526, \"fully_diluted_valuation\": 53130138283.87771}}}",
    "chainIncentives": "{\"status\": \"loaded\", \"data\": {\"emissions24h\": 0, \"emissions7d\": 0, \"emissions30d\": 0}}",
    "stablecoins_keys": [
     "data",
@@ -1510,7 +1510,7 @@
    ],
    "charts": "[\"TVL\", \"Stablecoins Mcap\", \"Chain Fees\", \"Chain Revenue\", \"Holders Revenue\", \"DEXs Volume\", \"Perps Volume\", \"Token Incentives\", \"App Revenue\", \"App Fees\", \"Bridged TVL\", \"Active Addresses\", \"Transactions\", \"Net Inflows\", \"Token Price\", \"Token Mcap\", \"Token Volume\"]"
   },
-  "near:Chain REV": "Chain REV (24h)   $516,266     Token Incentives (24h) </",
+  "near:Chain REV": "Chain REV (24h)   $532,829     Token Incentives (24h) </",
   "near:App Revenue": "App Revenue, App Fees, Bridged TVL, Active Addresses, Transactions, Net Inflows, Token Price, Token Mcap, Token Volume, RWA Active AUM, and protocols on Solana.\" data-next-head=\"\"/>  <meta property=\"o",
   "near:App Fees": "App Fees, Bridged TVL, Active Addresses, Transactions, Net Inflows, Token Price, Token Mcap, Token Volume, RWA Active AUM, and protocols on Solana.\" data-next-head=\"\"/>  <meta property=\"og:url\" conten",
   "near:Chain Fees": "Chain Fees, Chain Revenue, Holders Revenue, DEXs Volume, Perps Volume, Token Incentives, App Revenue, App Fees, Bridged TVL, Active Addresses, Transactions, Net Inflows, Token Price, Token Mcap, Token",
