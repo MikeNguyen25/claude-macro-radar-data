@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-11-11T03:06:58+00:00",
+ "ranAt": "2026-11-11T03:07:47+00:00",
  "today_utc": "2026-11-11",
  "dex": {
   "url": "https://api.llama.fi/overview/dexs/solana?excludeTotalDataChart=false&excludeTotalDataChartBreakdown=true&dataType=dailyVolume",
@@ -1268,7 +1268,7 @@
  "etf": {
   "url": "https://farside.co.uk/sol/",
   "status": 200,
-  "bytes": 124904,
+  "bytes": 124903,
   "rows": 24,
   "header": [
    "",
@@ -1311,9 +1311,9 @@
   "url": "https://coins.llama.fi/prices/current/coingecko:solana",
   "status": 200,
   "coin": {
-   "price": 83.35,
+   "price": 83.42,
    "symbol": "SOL",
-   "timestamp": 1794366308,
+   "timestamp": 1794366404,
    "confidence": 0.999
   }
  },
