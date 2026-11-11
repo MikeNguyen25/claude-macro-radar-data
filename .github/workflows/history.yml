@@ -1,0 +1,41 @@
+name: history
+
+# Monthly history (from 2017) of markets and US/world macro series for backtesting macro-radar-claude.
+# Runs on the 3rd of each month, when it is pushed, and on demand (Actions → history → Run workflow).
+on:
+  schedule:
+    - cron: "41 2 3 * *"
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "scripts/fetch_history.py"
+      - ".github/workflows/history.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-commit
+  cancel-in-progress: false
+
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch monthly history
+        run: python3 scripts/fetch_history.py
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "No new data"
+            exit 0
+          fi
+          git commit -m "data: monthly history $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --quiet origin main
+          git push origin HEAD:main
