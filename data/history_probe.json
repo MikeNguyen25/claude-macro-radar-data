@@ -1,5 +1,5 @@
 {
- "ranAt": "2026-11-11T03:06:58+00:00",
+ "ranAt": "2026-11-11T03:07:45+00:00",
  "MKT.BTC": {
   "ok": true,
   "n": 118,
@@ -30,14 +30,14 @@
  },
  "MKT.SPX": {
   "ok": true,
-  "n": 109,
+  "n": 118,
   "first": "2017-01",
   "last": "2026-10",
   "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC"
  },
  "MKT.NDX": {
   "ok": true,
-  "n": 109,
+  "n": 118,
   "first": "2017-01",
   "last": "2026-10",
   "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC"
@@ -59,16 +59,16 @@
  },
  "US.dxy": {
   "ok": true,
-  "n": 109,
+  "n": 118,
   "first": "2017-01",
   "last": "2026-10",
   "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB"
  },
  "WORLD.brent": {
   "ok": true,
-  "n": 94,
+  "n": 101,
   "first": "2017-02",
-  "last": "2026-09",
+  "last": "2026-10",
   "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF"
  },
  "US.cpi_yoy": {
