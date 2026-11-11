@@ -1,0 +1,144 @@
+{
+ "ranAt": "2026-11-11T03:06:58+00:00",
+ "MKT.BTC": {
+  "ok": true,
+  "n": 118,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/BTC-USD"
+ },
+ "MKT.SOL": {
+  "ok": true,
+  "n": 79,
+  "first": "2020-04",
+  "last": "2026-10",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/SOL-USD"
+ },
+ "MKT.DOGE": {
+  "ok": true,
+  "n": 108,
+  "first": "2017-11",
+  "last": "2026-10",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/DOGE-USD"
+ },
+ "MKT.TRX": {
+  "ok": true,
+  "n": 108,
+  "first": "2017-11",
+  "last": "2026-10",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/TRX-USD"
+ },
+ "MKT.SPX": {
+  "ok": true,
+  "n": 109,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EGSPC"
+ },
+ "MKT.NDX": {
+  "ok": true,
+  "n": 109,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC"
+ },
+ "MKT.STI": {
+  "ok": true,
+  "n": 118,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESTI"
+ },
+ "MKT.SET": {
+  "ok": false,
+  "error": "no points"
+ },
+ "MKT.VNI": {
+  "ok": false,
+  "error": "no points"
+ },
+ "US.dxy": {
+  "ok": true,
+  "n": 109,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB"
+ },
+ "WORLD.brent": {
+  "ok": true,
+  "n": 94,
+  "first": "2017-02",
+  "last": "2026-09",
+  "source": "https://query1.finance.yahoo.com/v8/finance/chart/BZ%3DF"
+ },
+ "US.cpi_yoy": {
+  "ok": true,
+  "n": 104,
+  "first": "2018-01",
+  "last": "2026-09",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL&cosd=2017-01-01"
+ },
+ "US.core_pce_yoy": {
+  "ok": true,
+  "n": 105,
+  "first": "2018-01",
+  "last": "2026-09",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PCEPILFE&cosd=2017-01-01"
+ },
+ "US.unemp": {
+  "ok": true,
+  "n": 117,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=UNRATE&cosd=2017-01-01"
+ },
+ "US.payrolls": {
+  "ok": true,
+  "n": 117,
+  "first": "2017-02",
+  "last": "2026-10",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=PAYEMS&cosd=2017-01-01"
+ },
+ "US.fed_funds": {
+  "ok": true,
+  "n": 118,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS&cosd=2017-01-01"
+ },
+ "US.us10y": {
+  "ok": true,
+  "n": 118,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=GS10&cosd=2017-01-01"
+ },
+ "US.gdp_qoq": {
+  "ok": true,
+  "n": 39,
+  "first": "2017-03",
+  "last": "2026-09",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=A191RL1Q225SBEA&cosd=2017-01-01"
+ },
+ "US.vix": {
+  "ok": true,
+  "n": 118,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=2017-01-01"
+ },
+ "WORLD.ecb_depo": {
+  "ok": true,
+  "n": 118,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=ECBDFR&cosd=2017-01-01"
+ },
+ "CN.usdcny": {
+  "ok": true,
+  "n": 118,
+  "first": "2017-01",
+  "last": "2026-10",
+  "source": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXCHUS&cosd=2017-01-01"
+ }
+}
