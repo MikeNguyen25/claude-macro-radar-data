@@ -119,10 +119,24 @@ def yahoo(sym):
     for t, c in zip(ts, close):
         if c is None:
             continue
-        # monthly bars are stamped at the first trading day of the month (exchange time); use the calendar month of that stamp + offset
-        d = dt.datetime.fromtimestamp(t + res.get('meta', {}).get('gmtoffset', 0), dt.timezone.utc).date()
+        # a monthly bar is stamped at local midnight of the month's first trading day, i.e. within ±12 h of UTC midnight;
+        # shifting by +12 h before taking the UTC date gives that local date for every exchange (the DST offset varies by month)
+        d = dt.datetime.fromtimestamp(t + 12 * 3600, dt.timezone.utc).date()
         out[ym(d)] = float(c)
     return out, url.split('?')[0]
+
+
+def stooq(sym):
+    url = f'https://stooq.com/q/d/l/?s={urllib.request.quote(sym)}&i=m'
+    st, raw = get(url, 'text/csv')
+    rows = list(csv.reader(io.StringIO(raw.decode('utf-8', 'replace'))))
+    out = {}
+    for r in rows[1:]:
+        try:
+            d = dt.date.fromisoformat(r[0]); out[ym(d)] = float(r[4])
+        except (ValueError, IndexError):
+            continue
+    return out, url
 
 
 def binance(symbol):
@@ -149,8 +163,8 @@ SPEC = [
     ('MKT.SPX', lambda: yahoo('^GSPC'), 'điểm', 'S&P 500 đóng cửa cuối tháng'),
     ('MKT.NDX', lambda: yahoo('^IXIC'), 'điểm', 'Nasdaq Composite đóng cửa cuối tháng'),
     ('MKT.STI', lambda: yahoo('^STI'), 'điểm', 'STI đóng cửa cuối tháng'),
-    ('MKT.SET', lambda: yahoo('^SET.BK'), 'điểm', 'SET Index đóng cửa cuối tháng'),
-    ('MKT.VNI', lambda: first_ok([lambda: yahoo('^VNINDEX.VN'), lambda: yahoo('VNINDEX.VN'), lambda: yahoo('^VNINDEX')]), 'điểm', 'VN-Index đóng cửa cuối tháng'),
+    ('MKT.SET', lambda: first_ok([lambda: yahoo('^SET.BK'), lambda: stooq('^set'), lambda: yahoo('^SETI')]), 'điểm', 'SET Index đóng cửa cuối tháng'),
+    ('MKT.VNI', lambda: first_ok([lambda: stooq('^vni'), lambda: stooq('vnindex'), lambda: yahoo('^VNINDEX.VN'), lambda: yahoo('VNINDEX.VN')]), 'điểm', 'VN-Index đóng cửa cuối tháng'),
     ('US.dxy', lambda: yahoo('DX-Y.NYB'), 'điểm', 'Chỉ số USD (ICE) đóng cửa cuối tháng'),
     ('WORLD.brent', lambda: yahoo('BZ=F'), 'USD/thùng', 'Brent kỳ hạn gần nhất, đóng cửa cuối tháng'),
     ('US.cpi_yoy', lambda: fred_tf('CPIAUCSL', lambda o: yoy(monthly_first_of(o))), '%', 'CPI-U so với cùng kỳ, tính từ CPIAUCSL'),
