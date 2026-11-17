@@ -1,48 +1,50 @@
 {
- "generatedAt": "2026-11-17T03:58:18+00:00",
+ "generatedAt": "2026-11-17T16:11:56+00:00",
  "latest": {
   "SOL.price": {
-   "value": 72.59914675,
-   "time": "2026-11-17T03:56:38+00:00",
+   "value": 72.68869520000001,
+   "time": "2026-11-17T16:10:25+00:00",
    "source": "DefiLlama coins (CoinGecko id)"
   },
   "SOL.w_dex": {
    "date": "2026-11-17",
-   "value": 0.7323,
+   "value": 1.4645,
    "partial": true,
-   "readAt": "2026-11-17T03:58:18+00:00"
+   "readAt": "2026-11-17T16:11:56+00:00"
   },
   "SOL.w_rev": {
-   "date": "2026-11-15",
-   "value": 0.455
+   "date": "2026-11-16",
+   "value": 0.587
   },
   "SOL.w_app_rev": {
    "date": "2026-11-17",
-   "value": 2.524,
+   "value": 3.047,
    "partial": true,
-   "readAt": "2026-11-17T03:58:18+00:00"
+   "readAt": "2026-11-17T16:11:56+00:00"
   },
   "SOL.w_app_fees": {
    "date": "2026-11-17",
-   "value": 5.891,
+   "value": 7.331,
    "partial": true,
-   "readAt": "2026-11-17T03:58:18+00:00"
+   "readAt": "2026-11-17T16:11:56+00:00"
   },
   "SOL.w_etf": {
-   "date": "2026-11-16",
-   "value": 11.7
+   "date": "2026-11-17",
+   "value": 0.0,
+   "partial": true,
+   "readAt": "2026-11-17T16:11:56+00:00"
   },
   "SOL.d_tvl": {
    "date": "2026-11-17",
-   "value": 4.7263,
+   "value": 4.7714,
    "partial": true,
-   "readAt": "2026-11-17T03:58:18+00:00"
+   "readAt": "2026-11-17T16:11:56+00:00"
   },
   "SOL.d_stables": {
    "date": "2026-11-17",
-   "value": 14.3331,
+   "value": 14.3352,
    "partial": true,
-   "readAt": "2026-11-17T03:58:18+00:00"
+   "readAt": "2026-11-17T16:11:56+00:00"
   }
  },
  "errors": []
